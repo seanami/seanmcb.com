@@ -101,6 +101,48 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.about-text {
+  display: none;
+}
+
+.links .about {
+  position: relative;
+}
+
+.links .about .about-text {
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  bottom: 100%;
+  color: #333;
+  font-weight: normal;
+  left: -20px;
+  line-height: 1.5;
+  opacity: 0.9;
+  padding: 20px;
+  position: absolute;
+  text-align: left;
+  width: 320px;
+}
+
+.links .show .about-text {
+  display: block;
+}
+
+.links .about .about-text:before {
+  background-color: #fff;
+  bottom: -10px;
+  content: " ";
+  height: 20px;
+  left: 35px;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 20px;
+}
+
 /* Default theme
 THEME = {
   "name": "default",

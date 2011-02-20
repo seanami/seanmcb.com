@@ -9,6 +9,7 @@
         themes.push($.parseJSON(matches[i].replace('THEME = ', '')));
       }
       setupPicker(themes);
+      setupAboutBubble();
     });
   }
 
@@ -42,6 +43,34 @@
     }, 3000);
     // Center vertically again
     centerVertically();
+  }
+
+  function setupAboutBubble() {
+    var enterTimeout, leaveTimeout;
+    var $li = $('<li>')
+      .addClass('about')
+      .mouseenter(function(e) {
+        clearTimeout(leaveTimeout);
+        enterTimeout = setTimeout(function() {
+          $li.addClass('show');
+        }, 1000);
+      })
+      .mouseleave(function(e) {
+        clearTimeout(enterTimeout);
+        leaveTimeout = setTimeout(function() {
+          $li.removeClass('show');
+        }, 250);
+      });
+    var $a = $('<a>')
+      .text('what?')
+      .attr('href', '#about')
+      .click(function(e) {
+        e.preventDefault();
+        clearTimeout(enterTimeout);
+        clearTimeout(leaveTimeout);
+        $li.addClass('show');
+      });
+    $('.links').prepend($li.append($a).append($('.about-text')));
   }
 
   function selectTheme($el) {
