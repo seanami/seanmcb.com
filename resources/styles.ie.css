@@ -1,0 +1,15 @@
+/* IE <=7 styles */
+
+.picker li {
+  display: inline;
+  height: 16px;
+  width: 16px;
+}
+
+.links a {
+  color: #fff;
+}
+
+.default .links a {
+  color: #666;
+}
