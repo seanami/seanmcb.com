@@ -1,0 +1,675 @@
+/* Universal components */
+
+body {
+  color: #333;
+  font-family: Helvetica, arial, "URW Gothic L", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+.picker {
+  margin: 0;
+  padding: 20px 0 0;
+  position: relative;
+  text-align: center;
+  z-index: 100;
+}
+
+.picker li {
+  display: inline;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.picker a {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  display: inline;
+  display: inline-block;
+  height: 16px;
+  outline: none;
+  text-indent: -9999px;
+  width: 16px;
+}
+
+.picker .selected a {
+  background: none;
+  border: 1px solid #fff;
+  border-color: rgba(255, 255, 255, 0.9);
+  cursor: default;
+  height: 14px;
+  width: 14px;
+}
+
+.picker a:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.picker .selected a:hover {
+  background: none;
+}
+
+.canvas {
+  background: -moz-radial-gradient(50% 50% 90deg,ellipse contain, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)) no-repeat;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 250, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0))) no-repeat;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  width: 960px;
+}
+
+.name, .photo, .tagline {
+  margin: 0;
+  position: absolute;
+}
+
+.photo {
+  height: 200px;
+  width: 200px;
+}
+
+.links {
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  position: relative;
+  text-align: center;
+  z-index: 100;
+}
+
+.links li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.links a {
+  border-bottom: 3px solid transparent;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+
+.links a:hover {
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Default theme
+THEME = {
+  'name': 'default',
+  'thing': 'website',
+  'class': 'default',
+  'kitId': null,
+  'background': '#ccc'
+}
+*/
+
+.default {
+  background: #ccc;
+  font-family: Helvetica, arial, "URW Gothic L", sans-serif;
+}
+
+.default .canvas {
+  background: -moz-radial-gradient(50% 50% 90deg,ellipse contain, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)) no-repeat;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 250, from(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0))) no-repeat;
+}
+
+.default .name,
+.default .tagline {
+  -moz-text-shadow: 1px 1px 0 #fff;
+  -webkit-text-shadow: 1px 1px 0 #fff;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.default .name {
+  bottom: 276px;
+  font-size: 65px;
+  right: 410px;
+}
+
+.default .photo {
+  border: 10px solid #fff;
+  -moz-box-shadow: 0 2px 3px #999;
+  -webkit-box-shadow: 0 2px 3px #999;
+  box-shadow: 0 2px 3px #999;
+  left: 580px;
+  top: 145px;
+}
+
+.default .tagline {
+  font-size: 28px;
+  font-weight: normal;
+  right: 410px;
+  top: 230px;
+}
+
+.default .picker a {
+  background: #666;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.default .picker .selected a {
+  background: none;
+  border-color: #666;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.default .picker a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.default .picker .selected a:hover {
+  background: none;
+}
+
+.default .links a {
+  color: #666;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.default .links a:hover {
+  border-color: #666;
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Favorite cocktail theme
+THEME = {
+  'name': 'favorite cocktail',
+  'thing': 'favorite cocktail',
+  'class': 'favorite-cocktail',
+  'kitId': 'vtt0jxt',
+  'background': '#636'
+}
+*/
+
+.favorite-cocktail {
+  background: #636;
+  font-family: Helvetica, arial, "URW Gothic L", sans-serif;
+}
+
+.favorite-cocktail .name,
+.favorite-cocktail .tagline {
+  color: #DBD0DB;
+  font-weight: normal;
+  -moz-text-shadow: -1px -1px 0 #3B243B;
+  -webkit-text-shadow: -1px -1px 0 #3B243B;
+  text-shadow: -1px -1px 0 #3B243B;
+}
+
+.favorite-cocktail .name {
+  font-family: "ltc-goudy-ornate-1", "ltc-goudy-ornate-2", serif;
+  font-size: 120px;
+  position: static;
+}
+
+.favorite-cocktail .name .word1 {
+  bottom: 250px;
+  left: 200px;
+  position: absolute;
+}
+
+.favorite-cocktail .name .word1 .char1 {
+  font-size: 180px;
+}
+
+.favorite-cocktail .name .word1 .char3 {
+  position: relative;
+  top: 15px;
+}
+
+.favorite-cocktail .name .word1 .char4 {
+  margin-left: -4px;
+}
+
+.favorite-cocktail .name .word2 {
+  bottom: 170px;
+  left: 90px;
+  position: absolute;
+}
+
+.favorite-cocktail .name .word2 .char1 {
+  font-size: 150px;
+  position: relative;
+  top: 16px;
+}
+
+.favorite-cocktail .name .word2 .char2 {
+  bottom: 24px;
+  font-size: 80px;
+  margin: 0pt -10px 0pt -15px;
+  position: relative;
+}
+
+.favorite-cocktail .name .word2 .char4 {
+  margin-left: -4px;
+}
+
+.favorite-cocktail .photo {
+  border: 10px solid #FFFFFF;
+  border-width: 10px 10px 40px;
+  -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  -moz-transform: matrix(1, 0.2, -0.4, 0.9, 0, 0);
+  -webkit-transform: matrix(1, 0.2, -0.4, 0.9, 0, 0);
+  transform: matrix(1, 0.2, -0.5, 0.4, 0, 0);
+}
+
+.favorite-cocktail .tagline {
+  font-size: 20px;
+  left: 426px;
+  top: 330px;
+}
+
+.favorite-cocktail .tagline .word3 {
+  font-family: "ltc-goudy-ornate-1", "ltc-goudy-ornate-2", serif;
+  font-size: 60px;
+  left: -36px;
+  position: absolute;
+  top: 6px;
+}
+
+.favorite-cocktail .tagline .word4 {
+  font-family: "ltc-goudy-ornate-1", "ltc-goudy-ornate-2", serif;
+  font-size: 60px;
+  left: 96px;
+  position: absolute;
+  top: 44px;
+}
+
+/* Nom de plume theme
+THEME = {
+  'name': 'nom de plume',
+  'thing': 'nom de plume',
+  'class': 'nom-de-plume',
+  'kitId': 'vvu1hkj',
+  'background': '#6C622D'
+}
+*/
+
+.nom-de-plume {
+  background: #6C622D;
+}
+
+.nom-de-plume .name,
+.nom-de-plume .tagline {
+  color: #222014;
+  font-family: "bouffant-1", "bouffant-2", cursive;
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+.nom-de-plume .name {
+  font-size: 220px;
+  font-weight: 400;
+  line-height: 220px;
+  z-index:2;
+}
+
+.nom-de-plume .name .word1 {
+  left: 298px;
+  position: absolute;
+  top: 90px;
+}
+
+.nom-de-plume .name .word1 .char1 {
+  bottom: -20px;
+  font-size: 350px;
+  position: relative;
+}
+
+.nom-de-plume .name .word1 .char4 {
+  font-size: 250px;
+}
+
+.nom-de-plume .name .word2 {
+  left: 188px;
+  position: absolute;
+  top: 215px;
+}
+
+.nom-de-plume .name .word2 .char1 {
+  bottom: -75px;
+  font-size: 320px;
+  position: relative;
+}
+
+.nom-de-plume .name .word2 .char2 {
+  margin-left: 10px;
+}
+
+.nom-de-plume .name .word2 .char3 {
+  bottom: -30px;
+  margin-left: -12px;
+  position: relative;
+}
+
+.nom-de-plume .name .word2 .char4 {
+  margin-left: -10px;
+}
+
+.nom-de-plume .name .word2 .char7 {
+  bottom: -5px;
+  font-size: 250px;
+  position: relative;
+}
+
+.nom-de-plume .photo {
+  border-color: #968F69;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 20px 520px 20px 20px;
+  height: 200px;
+  left:120px;
+  top: 100px;
+  -moz-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+  width: 200px;
+}
+
+.nom-de-plume .tagline {
+  font-size: 100px;
+}
+
+.nom-de-plume .tagline .word1 {
+  left: 574px;
+  position: absolute;
+  top: 165px;
+}
+
+.nom-de-plume .tagline .word2 {
+  left: 640px;
+  position: absolute;
+  top: 160px;
+}
+
+.nom-de-plume .tagline .word3 {
+  font-size: 200px;
+  left: 570px;
+  position: absolute;
+  top: 155px;
+}
+
+.nom-de-plume .tagline .word4 {
+  left: 565px;
+  position: absolute;
+  top: 315px;
+}
+
+.nom-de-plume .tagline .word5 {
+  font-size: 200px;
+  left: 565px;
+  position: absolute;
+  top: 308px;
+}
+
+/* Soap box theme
+THEME = {
+  'name': 'soap box',
+  'thing': 'soap box',
+  'class': 'soap-box',
+  'kitId': 'zwo1xnl',
+  'background': '#C8BC34'
+}
+*/
+
+.soap-box {
+  background: #C8BC34;
+}
+
+.soap-box .name,
+.soap-box .tagline {
+  color: #110;
+  font-family: "ff-prater-block-web-1", "ff-prater-block-web-2", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 50px;
+  right: 420px;
+  text-align: right;
+}
+
+.soap-box .name {
+  bottom: 190px;
+  font-size: 120px;
+  line-height: 110px;
+}
+
+.soap-box .name .word1,
+.soap-box .name .word2 {
+  display: block;
+}
+
+.soap-box .name .word1 .char1 {
+  font-size: 150px;
+  text-shadow: 6px 8px 0 #3C7EDF;
+}
+
+.soap-box .name .word1 .char3 {
+  text-shadow: -3px 10px 0 #96A757;
+}
+
+.soap-box .name .word2 .char1 {
+  font-size: 150px;
+  text-shadow: 8px -10px 0 #9B3B25;
+}
+
+.soap-box .name .word2 .char4 {
+  text-shadow: -3px -8px 0 #C37D34;
+}
+
+.soap-box .photo {
+  -moz-box-shadow: 0 0 0 #C8BC34, 10px 10px 0 #3C7EDF, -10px -10px #9B3B25, 20px 20px #96A757, -20px -20px #C37D34;
+  -webkit-box-shadow: 0 0 0 #C8BC34, 10px 10px 0 #3C7EDF, -10px -10px #9B3B25, 20px 20px #96A757, -20px -20px #C37D34;
+  box-shadow: 0 0 0 #C8BC34, 10px 10px 0 #3C7EDF, -10px -10px #9B3B25, 20px 20px #96A757, -20px -20px #C37D34;
+  height: 250px;
+  opacity: 0.9;
+  right: 125px;
+  top: 125px;
+  width: 250px;
+}
+
+.soap-box .tagline {
+  top: 340px;
+}
+
+.soap-box .tagline .word1 {
+  text-shadow: 3px 5px 0 #3C7EDF;
+}
+
+.soap-box .tagline .word2 {
+  text-shadow: -5px -3px #96A757;
+}
+
+.soap-box .tagline .word3 {
+  font-size: 80px;
+  text-shadow: -8px 6px #9B3B25;
+}
+
+.soap-box .tagline .word4 {
+  font-size: 80px;
+  text-shadow: 6px -8px #C37D34;
+}
+
+/* Rock opera theme
+THEME = {
+  'name': 'rock opera',
+  'thing': 'rock opera',
+  'class': 'rock-opera',
+  'kitId': 'vmt7deb',
+  'background': '#7D321B'
+}
+*/
+
+.rock-opera {
+  background: #7D321B;
+}
+
+.rock-opera .name,
+.rock-opera .tagline {
+  color: #fff;
+  font-family: "metalista-web-1", "metalista-web-2", fantasy;
+  font-weight: 400;
+}
+
+.rock-opera .name {
+  bottom: 100px;
+  font-size: 125px;
+  left: 210px;
+  line-height: 95px;
+  text-align: right;
+  text-shadow: -1px 2px 0 #7D321B, -2px 4px 0 #7D321B, -3px 6px 0 #7D321B, -4px 8px 0 #7D321B;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  z-index: 2;
+}
+
+.rock-opera .name .word1 {
+  display: block;
+  margin-right: 23px;
+}
+
+.rock-opera .name .word2 {
+  display: block;
+}
+
+.rock-opera .photo {
+  height: 450px;
+  left: 255px;
+  top: 25px;
+  width: 450px;
+}
+
+.rock-opera .tagline {
+  bottom: 50px;
+  color: #7D321B;
+  font-size: 40px;
+  line-height: 60px;
+  right: 280px;
+  text-shadow: -2px -1px 0 #fff, 2px 1px 0 #fff;
+}
+
+.rock-opera .tagline .word1 {
+  left: 38px;
+  position: absolute;
+  top: -50px;
+}
+
+.rock-opera .tagline .word2 {
+  left: 88px;
+  position: absolute;
+  top: -50px;
+}
+
+.rock-opera .tagline .word3,
+.rock-opera .tagline .word4 {
+  color: #fff;
+  display: block;
+  font-size: 80px;
+  text-shadow: -2px -1px 0 #7D321B, -4px -2px 0 #7D321B, -6px -3px 0 #7D321B;
+}
+
+.rock-opera .tagline .word3 {
+  margin-left: 14px;
+}
+
+/* Ten speed theme
+THEME = {
+  'name': 'ten speed',
+  'thing': 'ten speed',
+  'class': 'ten-speed',
+  'kitId': 'htt5gsy',
+  'background': '#FFCC33'
+}
+*/
+
+.ten-speed {
+  background: #FFCC33;
+}
+
+.ten-speed .name,
+.ten-speed .tagline {
+  font-family: "ff-cocon-web-pro-1", "ff-cocon-web-pro-2", sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.ten-speed .name .word1 {
+  color: #7F7F66;
+  color: rgba(0, 51, 102, 0.6);
+  font-size: 300px;
+  font-weight: bold;
+  left: 120px;
+  position: relative;
+  top: 10px;
+  z-index: 2;
+}
+
+.ten-speed .name .word1 .char1 {
+  position: relative;
+  top: 20px;
+}
+
+.ten-speed .name .word2 {
+  color: #CC7F33;
+  color: rgba(153, 51, 0, 0.6);
+  font-size: 202px;
+  left: 85px;
+  position: absolute;
+  top: 84px;
+  z-index: 1;
+}
+
+.ten-speed .photo {
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  -moz-box-shadow: -100px 0 0 rgba(0, 0, 0, 0.3), -200px 0 0 rgba(0, 0, 0, 0.25), -300px 0 0 rgba(0, 0, 0, 0.2), -400px 0 0 rgba(0, 0, 0, 0.15), -500px 0 0 rgba(0, 0, 0, 0.1), -600px 0 0 rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: -100px 0 0 rgba(0, 0, 0, 0.3), -200px 0 0 rgba(0, 0, 0, 0.25), -300px 0 0 rgba(0, 0, 0, 0.2), -400px 0 0 rgba(0, 0, 0, 0.15), -500px 0 0 rgba(0, 0, 0, 0.1), -600px 0 0 rgba(0, 0, 0, 0.05);
+  box-shadow: -100px 0 0 rgba(0, 0, 0, 0.3), -200px 0 0 rgba(0, 0, 0, 0.25), -300px 0 0 rgba(0, 0, 0, 0.2), -400px 0 0 rgba(0, 0, 0, 0.15), -500px 0 0 rgba(0, 0, 0, 0.1), -600px 0 0 rgba(0, 0, 0, 0.05);
+  height: 80px;
+  left: 775px;
+  opacity: 0.8;
+  position: absolute;
+  top: 316px;
+  width: 80px;
+  z-index: 3;
+}
+
+.ten-speed .tagline {
+  color: #66531B;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 78px;
+  left: 193px;
+  position: absolute;
+  top: 310px;
+  z-index: 4;
+}
+
+.ten-speed .tagline .word1,
+.ten-speed .tagline .word2 {
+  font-size: 60px;
+}
+
+.ten-speed .tagline .word3,
+.ten-speed .tagline .word4 {
+  font-weight: bold;
+}
