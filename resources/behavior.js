@@ -17,7 +17,10 @@
     var $ol = $('<ol>').addClass('picker');
     for (var i in themes) {
       var theme = themes[i];
-      var $a = $('<a href="#">').text(theme['name']).attr('title', 'Switch to ' + theme['name']);
+      var $a = $('<a>')
+          .text(theme['name'])
+          .attr('href', '#' + theme['name'])
+          .attr('title', 'Switch to ' + theme['name']);
       $a.data('theme', theme);
       $a.click(function(e) {
         e.preventDefault();
