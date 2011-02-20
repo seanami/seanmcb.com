@@ -18,9 +18,9 @@
     for (var i in themes) {
       var theme = themes[i];
       var $a = $('<a>')
-          .text(theme['name'])
-          .attr('href', '#' + theme['name'])
-          .attr('title', 'Switch to ' + theme['name']);
+        .text(theme['name'])
+        .attr('href', '#' + theme['name'])
+        .attr('title', 'Switch to ' + theme['name']);
       $a.data('theme', theme);
       $a.click(function(e) {
         e.preventDefault();
