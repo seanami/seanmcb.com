@@ -104,11 +104,11 @@ body {
 
 /* Default theme
 THEME = {
-  'name': 'default',
-  'thing': 'website',
-  'class': 'default',
-  'kitId': null,
-  'background': '#ccc'
+  "name": "default",
+  "thing": "website",
+  "class": "default",
+  "kitId": null,
+  "background": "#ccc"
 }
 */
 
@@ -183,11 +183,11 @@ THEME = {
 
 /* Favorite cocktail theme
 THEME = {
-  'name': 'favorite cocktail',
-  'thing': 'favorite cocktail',
-  'class': 'favorite-cocktail',
-  'kitId': 'vtt0jxt',
-  'background': '#636'
+  "name": "favorite cocktail",
+  "thing": "favorite cocktail",
+  "class": "favorite-cocktail",
+  "kitId": "vtt0jxt",
+  "background": "#636"
 }
 */
 
@@ -292,11 +292,11 @@ THEME = {
 
 /* Nom de plume theme
 THEME = {
-  'name': 'nom de plume',
-  'thing': 'nom de plume',
-  'class': 'nom-de-plume',
-  'kitId': 'vvu1hkj',
-  'background': '#6C622D'
+  "name": "nom de plume",
+  "thing": "nom de plume",
+  "class": "nom-de-plume",
+  "kitId": "vvu1hkj",
+  "background": "#6C622D"
 }
 */
 
@@ -422,11 +422,11 @@ THEME = {
 
 /* Soap box theme
 THEME = {
-  'name': 'soap box',
-  'thing': 'soap box',
-  'class': 'soap-box',
-  'kitId': 'zwo1xnl',
-  'background': '#C8BC34'
+  "name": "soap box",
+  "thing": "soap box",
+  "class": "soap-box",
+  "kitId": "zwo1xnl",
+  "background": "#C8BC34"
 }
 */
 
@@ -509,11 +509,11 @@ THEME = {
 
 /* Rock opera theme
 THEME = {
-  'name': 'rock opera',
-  'thing': 'rock opera',
-  'class': 'rock-opera',
-  'kitId': 'vmt7deb',
-  'background': '#7D321B'
+  "name": "rock opera",
+  "thing": "rock opera",
+  "class": "rock-opera",
+  "kitId": "vmt7deb",
+  "background": "#7D321B"
 }
 */
 
@@ -592,11 +592,11 @@ THEME = {
 
 /* Ten speed theme
 THEME = {
-  'name': 'ten speed',
-  'thing': 'ten speed',
-  'class': 'ten-speed',
-  'kitId': 'htt5gsy',
-  'background': '#FFCC33'
+  "name": "ten speed",
+  "thing": "ten speed",
+  "class": "ten-speed",
+  "kitId": "htt5gsy",
+  "background": "#FFCC33"
 }
 */
 

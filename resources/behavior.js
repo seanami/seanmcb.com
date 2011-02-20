@@ -6,7 +6,7 @@
       var matches = data.match(/THEME = \{[^}]*\}/gm);
       var themes = [];
       for (var i = 0; i < matches.length; i++) {
-        themes.push(eval('(' + matches[i].replace('THEME = ', '') + ')'));
+        themes.push($.parseJSON(matches[i].replace('THEME = ', '')));
       }
       setupPicker(themes);
     });
